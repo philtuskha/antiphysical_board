@@ -1,0 +1,31 @@
+body, html{
+margin: 0;
+padding: 0;
+}
+* {
+  box-sizing:border-box;
+}
+.issues {
+}
+.issues li {
+  display: block;
+  width: 80%;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 20px;
+  margin:40px 0;
+
+}
+.board {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.board>div {
+  border: 1px solid cyan;
+  height: 100vh;
+  width: 25vw;
+  overflow: auto;
+  padding: 0px;
+}

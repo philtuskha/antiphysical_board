@@ -1,0 +1,63 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Antiphysical Board</title>
+  <link href="{% static 'css/the.css' %}" rel="stylesheet" >
+</head>
+<body>
+    <div id="app">
+        <div class="board">
+            <div>
+                <ul class="issues">
+                    <li v-for="m in message" v-if="m.status.name=='New'">
+                        <div class="ticket_id" v-html="m.id"></div>
+                        <div v-html="m.project.name"></div>
+                        <div v-html="m.priority.name"></div>
+                        <div v-html="m.author.name"></div>
+                        <div v-html="m.subject"></div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul class="issues">
+                    <li v-for="m in message" v-if="m.status.name=='In Progress'">
+                        <div class="ticket_id" v-html="m.id"></div>
+                        <div v-html="m.project.name"></div>
+                        <div v-html="m.priority.name"></div>
+                        <div v-html="m.author.name"></div>
+                        <div v-html="m.subject"></div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul class="issues">
+                    <li v-for="m in message" v-if="m.status.name=='Code Review'">
+                        <div class="ticket_id" v-html="m.id"></div>
+                        <div v-html="m.project.name"></div>
+                        <div v-html="m.priority.name"></div>
+                        <div v-html="m.author.name"></div>
+                        <div v-html="m.subject"></div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul class="issues">
+                    <li v-for="m in message" v-if="m.status.name=='Done'">
+                        <div class="ticket_id" v-html="m.id"></div>
+                        <div v-html="m.project.name"></div>
+                        <div v-html="m.priority.name"></div>
+                        <div v-html="m.author.name"></div>
+                        <div v-html="m.subject"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+<script src="{% static '/js/jquery-1.10.2.js' %}"></script>
+<script src="{% static 'js/vue.js' %}"></script>
+<script src="{% static 'js/the.js' %}"></script>
+</body>
+</html>
